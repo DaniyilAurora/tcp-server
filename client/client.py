@@ -20,5 +20,9 @@ def send(msg: str):
     client.send(send_length)
     client.send(message)
 
-send(' '.join(sys.argv[1:]))
+inp = input("Write your message: ")
+while inp != "-1":
+    send(inp)
+    inp = input("Write your message: ")
+
 send("!disconnect")
